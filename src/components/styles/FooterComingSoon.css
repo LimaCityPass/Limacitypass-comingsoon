@@ -1,0 +1,16 @@
+.alignresponsiveleft {
+    text-align: left;
+}
+
+.alignresponsiveright {
+    text-align: right;
+}
+
+@media only screen and (max-width: 500px) {
+    .alignresponsiveleft {
+        text-align: center;
+    }
+    .alignresponsiveright {
+        text-align: center;
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Icon } from 'react-fa';
+import './styles/FooterComingSoon.css'
 
 const QuickFontWithBackground = glamorous.div({
     fontFamily: 'Quicksand',
@@ -17,7 +18,8 @@ const QuickFontWithBackground = glamorous.div({
 
 const Margin = glamorous.div ({
     marginLeft: '15px',
-    marginRight: '15px'
+    marginRight: '15px',
+    marginBottom: '10px'
 });
 
 const AlignToBottom = glamorous.div({
@@ -32,13 +34,13 @@ class LcpFooter extends React.Component {
         return (
             <QuickFontWithBackground>
                 <Row between={'md'} bottom="lg" center="xs">
-                    <Col xs={12} sm={6} md={6} lg={6} style={{'text-align': 'left'}}>
+                    <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveleft' >
                         <Margin>
-                        © {new Date().getFullYear()} Lima City Pass, Inc. All
+                            © {new Date().getFullYear()} Lima City Pass, Inc. All
                         rights reserved.
-                    </Margin>
+                        </Margin>
                     </Col>
-                    <Col xs={12} sm={6} md={6} lg={6} style={{'text-align': 'right'}}>
+                    <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveright' >
                         <Margin>
                             <Icon name="envelope" style={{ marginRight: '5px' }} />
                             hello@limacitypass.com

@@ -16,18 +16,23 @@ const AlignVertically = glamorous.div ({
     transform: 'translate(-50%,-50%)'
 });
 
+const Body = glamorous.div ({
+    overflow: 'hidden'
+})
+
 class App extends Component {
     render() {
         return (
+            <Body>
+                <LcpBackground background={limaBackground}>
+                    <AlignVertically>
+                        <LcpLogoContent heightImg={200}/>
+                        <LcpNotifyMe />
+                    </AlignVertically>
 
-            <LcpBackground background={limaBackground}>
-                <AlignVertically>
-                    <LcpLogoContent heightImg={200}/>
-                    <LcpNotifyMe />
-                </AlignVertically>
-
-                <LcpFooter />
-            </LcpBackground>
+                    <LcpFooter />
+                </LcpBackground>
+            </Body>
         );
     }
 }
