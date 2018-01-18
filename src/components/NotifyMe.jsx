@@ -1,6 +1,14 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+const mediaQueries = {
+    phone: '@media only screen and (max-width: 500px)'
+};
+
+const Content = glamorous.div({
+    margin: '30px 0 30px 0'
+});
+
 const GlobalSquare = glamorous.div({
     margin: 'auto',
     fontFamily: 'Quicksand',
@@ -9,30 +17,46 @@ const GlobalSquare = glamorous.div({
     borderRadius: '5px',
     border: '3px solid #7682F0',
     width: 'fit-content',
-    height: '39px'
+    height: '39px',
+    ':active': {
+        border: '3px solid #4D559E'
+    }
 });
 
 const EmailInput = glamorous.input({
     fontFamily: 'Quicksand',
-    width: '10%',
+    fontSize: '14px',
     padding: '0 6px 0 6px',
+    border: 'none',
+    width: '280px',
     ':focus': {
         outline: 'none'
+    },
+    [mediaQueries.phone]: {
+        width: '180px'
     }
 });
 
 const NotifyButton = glamorous.div({
     cursor: 'pointer',
+    border: 'none',
     background: '#7682F0',
     textTransform: 'uppercase',
     color: '#ffffff',
-    padding: ' 0 6px 0 10px',
+    padding: ' 0 16px 0 20px',
     '-moz-user-select': '-moz-none',
     '-khtml-user-select': 'none',
     '-webkit-user-select': 'none',
     '-o-user-select': 'none',
-    width: '30%',
-    userSelect: 'none'
+    userSelect: 'none',
+    textAlign: 'center',
+    lineHeight: '39px',
+    '-webkit-touch-callout': 'none',
+    '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+    ':active': {
+        background: '#4D559E',
+        border: 'none'
+    }
 });
 
 class LcpNotifyMe extends React.Component {
@@ -61,10 +85,15 @@ class LcpNotifyMe extends React.Component {
     }
     render() {
         return (
-            <GlobalSquare>
-                <EmailInput type="text" placeholder="Your email" />
-                <NotifyButton style={{}}>NOTIFY ME</NotifyButton>
-            </GlobalSquare>
+            <Content>
+                <GlobalSquare>
+                    <EmailInput
+                        type="text"
+                        placeholder="Your email"
+                    />
+                    <NotifyButton>NOTIFY ME</NotifyButton>
+                </GlobalSquare>
+            </Content>
         );
     }
 }

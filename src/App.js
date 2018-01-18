@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <LcpBackground background={limaBackground}>
-                <LcpLogoContent height={'200px'} sizeFont={'24px'}/>
+                <LcpLogoContent heightImg={200}/>
                 <LcpNotifyMe />
                 <LcpFooter />
             </LcpBackground>

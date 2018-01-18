@@ -2,19 +2,31 @@ import React from 'react';
 import glamorous from 'glamorous';
 import LcpLogoImg from '../assets/lima_logo.png';
 
+const mediaQueries = {
+    phone: '@media only screen and (max-width: 500px)'
+};
+
+const Content = glamorous.div({
+    margin: '15px 0 10px 0'
+});
+
 const LogoImg = glamorous.img({
     width: 'auto',
-    height: '340px',
     'margin-left': 'auto',
-	'margin-right': 'auto',
-	display: 'block'
+    'margin-right': 'auto',
+    display: 'block'
 });
 
 const ComingSoonMessage = glamorous.div({
     fontFamily: 'Quicksand',
+    color: '#ffffff',
+    fontWeight: '200',
     fontSize: '24px',
     margin: 'auto',
-    width: 'fit-content'
+    width: 'fit-content',
+    [mediaQueries.phone]: {
+        fontSize: '18px'
+    }
 });
 
 const AlignMiddle = glamorous.div({
@@ -35,9 +47,11 @@ export default class LogoContent extends React.Component {
                         src={LcpLogoImg}
                         style={{ height: this.heightImg }}
                     />
-                    <ComingSoonMessage style={{ 'font-size': this.sizeFont }}>
-                        Get ready for a new way to live Lima
-                    </ComingSoonMessage>
+					<Content>
+						<ComingSoonMessage>
+	                        Get ready for a new way to live Lima
+	                    </ComingSoonMessage>
+					</Content>
                 </AlignMiddle>
             </div>
         );
