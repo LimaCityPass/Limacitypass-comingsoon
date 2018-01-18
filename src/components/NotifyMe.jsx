@@ -63,7 +63,7 @@ class LcpNotifyMe extends React.Component {
         return (
             <GlobalSquare>
                 <EmailInput type="text" placeholder="Your email" />
-                <NotifyButton>NOTIFY ME</NotifyButton>
+                <NotifyButton style={{}}>NOTIFY ME</NotifyButton>
             </GlobalSquare>
         );
     }
