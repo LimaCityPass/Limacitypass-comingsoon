@@ -24,6 +24,7 @@ const ComingSoonMessage = glamorous.div({
     fontSize: '24px',
     margin: 'auto',
     width: 'fit-content',
+    textAlign: 'center',
     [mediaQueries.phone]: {
         fontSize: '18px'
     }

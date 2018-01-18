@@ -56,34 +56,19 @@ const NotifyButton = glamorous.div({
     ':active': {
         background: '#4D559E',
         border: 'none',
-        padding: ' 0 10px 0 14px'
+    },
+    [mediaQueries.phone]: {
+        padding: ' 0 1px 0 4px',
+        width: '100px'
     }
 });
 
 class LcpNotifyMe extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            windowHeight: window.innerHeight,
-            windowWidth: window.innerWidth
-        };
-        this.updateDimensions = this.updateDimensions.bind(this);
+
     }
-    updateDimensions(e) {
-        this.setState({
-            windowHeight: window.innerHeight,
-            windowWidth: window.innerWidth
-        });
-    }
-    componentWillMount() {
-        this.updateDimensions();
-    }
-    componentDidMount() {
-        window.addEventListener('resize', this.updateDimensions);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
-    }
+
     render() {
         return (
             <Content>
