@@ -33,7 +33,7 @@ const EmailInput = glamorous.input({
         outline: 'none'
     },
     [mediaQueries.phone]: {
-        width: '180px'
+        width: '190px'
     }
 });
 
@@ -55,7 +55,8 @@ const NotifyButton = glamorous.div({
     '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
     ':active': {
         background: '#4D559E',
-        border: 'none'
+        border: 'none',
+        padding: ' 0 10px 0 14px'
     }
 });
 

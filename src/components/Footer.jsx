@@ -8,8 +8,16 @@ const QuickFontWithBackground = glamorous.div({
     fontSize: '14px',
     backgroundImage:
         'linear-gradient(-180deg, rgba(77,77,77,0.00) 0%, #221A16 100%)',
-    minHeight: '100px',
-    color: 'white'
+    minHeight: '30px',
+    color: 'white',
+    bottom: 0,
+    position: 'absolute',
+    width: '100%',
+});
+
+const Margin = glamorous.div ({
+    marginLeft: '15px',
+    marginRight: '15px'
 });
 
 const AlignToBottom = glamorous.div({
@@ -24,13 +32,18 @@ class LcpFooter extends React.Component {
         return (
             <QuickFontWithBackground>
                 <Row between={'md'} bottom="lg" center="xs">
-                    <Col xs={12} md={3} lg={3}>
+                    <Col xs={12} sm={6} md={6} lg={6} style={{'text-align': 'left'}}>
+                        <Margin>
                         © {new Date().getFullYear()} Lima City Pass, Inc. All
                         rights reserved.
+                    </Margin>
                     </Col>
-                    <Col xs={12} md={2} lg={2}>
-                        <Icon name="envelope" style={{ marginRight: '5px' }} />
-                        hello@limacitypass.com
+                    <Col xs={12} sm={6} md={6} lg={6} style={{'text-align': 'right'}}>
+                        <Margin>
+                            <Icon name="envelope" style={{ marginRight: '5px' }} />
+                            hello@limacitypass.com
+                        </Margin>
+
                     </Col>
                 </Row>
             </QuickFontWithBackground>

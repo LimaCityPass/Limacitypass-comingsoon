@@ -9,12 +9,23 @@ import './styles/app.css';
 
 import limaBackground from './assets/lima_coming_background.png';
 
+const AlignVertically = glamorous.div ({
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)'
+});
+
 class App extends Component {
     render() {
         return (
+
             <LcpBackground background={limaBackground}>
-                <LcpLogoContent heightImg={200}/>
-                <LcpNotifyMe />
+                <AlignVertically>
+                    <LcpLogoContent heightImg={200}/>
+                    <LcpNotifyMe />
+                </AlignVertically>
+
                 <LcpFooter />
             </LcpBackground>
         );

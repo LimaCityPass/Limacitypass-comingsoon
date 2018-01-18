@@ -9,6 +9,7 @@ class LcpBackground extends React.Component {
     }
     render() {
         const backStyle = {
+            position: 'relative',
             backgroundImage: `url(${this.background})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
