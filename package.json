@@ -3,9 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-loader": "^7.1.2",
+    "bloomer": "^0.6.3",
+    "bulma": "^0.6.2",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.11.3",
+    "glamour": "^1.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-fa": "^5.0.0",
+    "react-flexbox-grid": "^2.0.0",
+    "react-scripts": "1.1.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2"
   },
   "scripts": {
     "start": "react-scripts start",

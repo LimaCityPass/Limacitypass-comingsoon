@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LcpFooter from './components/Footer';
+import LcpLogoContent from './components/Logo';
+import LcpNotifyMe from './components/NotifyMe';
+import LcpBackground from './components/Background';
+import glamorous from 'glamorous';
+
+import './styles/app.css';
+
+import limaBackground from './assets/lima_coming_background.png';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <LcpBackground background={limaBackground}>
+                <LcpLogoContent height={'200px'} sizeFont={'24px'}/>
+                <LcpNotifyMe />
+                <LcpFooter />
+            </LcpBackground>
+        );
+    }
 }
 
 export default App;
