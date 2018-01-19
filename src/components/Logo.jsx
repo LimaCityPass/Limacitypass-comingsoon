@@ -19,7 +19,7 @@ const LogoImg = glamorous.img({
 });
 
 const ComingSoonMessage = glamorous.div({
-    fontFamily: 'Quicksand',
+    fontFamily: 'Poppins',
     color: '#ffffff',
     fontWeight: '200',
     fontSize: '24px',

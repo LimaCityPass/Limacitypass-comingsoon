@@ -6,7 +6,7 @@ import './styles/FooterComingSoon.css'
 import Heart from '../assets/heart.svg'
 
 const QuickFontWithBackground = glamorous.div({
-    fontFamily: 'Quicksand',
+    fontFamily: 'Poppins',
     fontSize: '14px',
     fontWeight: '300',
     backgroundImage:
@@ -38,7 +38,7 @@ class LcpFooter extends React.Component {
                 <Row between={'md'} bottom="lg" center="xs">
                     <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveleft' >
                         <Margin>
-                            &lt; Made with <img src={Heart} style={{'height':'12px'}}/> by MGNG &#62;
+                            {/* &lt; Made with <img src={Heart} style={{'height':'12px'}}/> by MGNG &#62; */}
                         </Margin>
                     </Col>
                     <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveright' >
