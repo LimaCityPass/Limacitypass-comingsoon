@@ -97,7 +97,7 @@ class LcpNotifyMe extends React.Component {
     render() {
         return (
             <Content>
-                <NotifyForm method="POST" action="https://formspree.io/maria.noriega@utec.edu.pe">
+                <NotifyForm method="POST" action="https://formspree.io/hello@limacitypass.com">
 
                         <EmailInput
                             type="email"
