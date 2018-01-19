@@ -9,16 +9,17 @@ import './styles/app.css';
 
 import limaBackground from './assets/lima_coming_background.png';
 
-const AlignVertically = glamorous.div ({
+const AlignVertically = glamorous.div({
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%,-50%)'
 });
 
-const Body = glamorous.div ({
-    overflow: 'hidden'
-})
+const Body = glamorous.div({
+    overflow: 'hidden',
+    height: '100%'
+});
 
 class App extends Component {
     render() {
@@ -26,7 +27,7 @@ class App extends Component {
             <Body>
                 <LcpBackground background={limaBackground}>
                     <AlignVertically>
-                        <LcpLogoContent heightImg={200}/>
+                        <LcpLogoContent heightImg={200} />
                         <LcpNotifyMe />
                     </AlignVertically>
                     <LcpFooter />

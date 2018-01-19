@@ -18,7 +18,7 @@ class LcpBackground extends React.Component {
             '-moz-background-size': 'cover',
             '-o-background-size': 'cover',
             'background-size': 'cover',
-            height: '-webkit-fill-available',
+            height: '100%',
         };
 
         return <div style={backStyle}>{this.props.children}</div>;

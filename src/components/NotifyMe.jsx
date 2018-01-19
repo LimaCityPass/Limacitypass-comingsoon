@@ -11,7 +11,7 @@ const Content = glamorous.div({
 
 const GlobalSquare = glamorous.div({
     margin: 'auto',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins, sans-serif',
     display: 'flex',
     fontSize: '14px',
     borderRadius: '5px',
@@ -24,7 +24,7 @@ const GlobalSquare = glamorous.div({
 });
 
 const EmailInput = glamorous.input({
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins, sans-serif',
     fontSize: '14px',
     padding: '0 12px 0 12px',
     border: 'none',
@@ -73,7 +73,7 @@ const NotifyForm = glamorous.form({
     '-webkit-touch-callout': 'none',
     '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
     margin: 'auto',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins, sans-serif',
     display: 'flex',
     fontSize: '14px',
     borderRadius: '5px',

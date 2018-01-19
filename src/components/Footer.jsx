@@ -6,7 +6,7 @@ import './styles/FooterComingSoon.css'
 import Heart from '../assets/heart.svg'
 
 const QuickFontWithBackground = glamorous.div({
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins, sans-serif',
     fontSize: '14px',
     fontWeight: '300',
     backgroundImage:
