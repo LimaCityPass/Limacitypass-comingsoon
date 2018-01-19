@@ -26,9 +26,10 @@ const GlobalSquare = glamorous.div({
 const EmailInput = glamorous.input({
     fontFamily: 'Quicksand',
     fontSize: '14px',
-    padding: '0 6px 0 6px',
+    padding: '0 12px 0 12px',
     border: 'none',
     width: '280px',
+    borderRadius: '5px',
     ':focus': {
         outline: 'none'
     },
@@ -37,7 +38,7 @@ const EmailInput = glamorous.input({
     }
 });
 
-const NotifyButton = glamorous.div({
+const NotifyButton = glamorous.button({
     cursor: 'pointer',
     border: 'none',
     background: '#7682F0',
@@ -57,9 +58,33 @@ const NotifyButton = glamorous.div({
         background: '#4D559E',
         border: 'none',
     },
+    ':focus': {
+        outline: 'none'
+    },
     [mediaQueries.phone]: {
         padding: ' 0 1px 0 4px',
         width: '100px'
+    }
+});
+
+const NotifyForm = glamorous.form({
+    background: '#7682F0',
+    userSelect: 'none',
+    '-webkit-touch-callout': 'none',
+    '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+    margin: 'auto',
+    fontFamily: 'Quicksand',
+    display: 'flex',
+    fontSize: '14px',
+    borderRadius: '5px',
+    border: '3px solid #7682F0',
+    width: 'fit-content',
+    height: '39px',
+    ':focus': {
+        outline: 'none'
+    },
+    ':active': {
+        border: '3px solid #4D559E'
     }
 });
 
@@ -72,13 +97,17 @@ class LcpNotifyMe extends React.Component {
     render() {
         return (
             <Content>
-                <GlobalSquare>
-                    <EmailInput
-                        type="text"
-                        placeholder="Your email"
-                    />
-                    <NotifyButton>NOTIFY ME</NotifyButton>
-                </GlobalSquare>
+                <NotifyForm method="POST" action="https://formspree.io/maria.noriega@utec.edu.pe">
+
+                        <EmailInput
+                            type="email"
+                            name="email"
+                            placeholder="Your email"
+                        />
+                        <NotifyButton type="submit">NOTIFY ME</NotifyButton>
+
+                    </NotifyForm>
+
             </Content>
         );
     }
