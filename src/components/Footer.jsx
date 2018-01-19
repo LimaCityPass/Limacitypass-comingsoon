@@ -3,10 +3,12 @@ import glamorous from 'glamorous';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Icon } from 'react-fa';
 import './styles/FooterComingSoon.css'
+import Heart from '../assets/heart.svg'
 
 const QuickFontWithBackground = glamorous.div({
     fontFamily: 'Quicksand',
     fontSize: '14px',
+    fontWeight: '300',
     backgroundImage:
         'linear-gradient(-180deg, rgba(77,77,77,0.00) 0%, #221A16 100%)',
     minHeight: '30px',
@@ -36,8 +38,7 @@ class LcpFooter extends React.Component {
                 <Row between={'md'} bottom="lg" center="xs">
                     <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveleft' >
                         <Margin>
-                            © {new Date().getFullYear()} Lima City Pass, Inc. All
-                        rights reserved.
+                            &lt; Made with <img src={Heart} style={{'height':'12px'}}/> by MGNG &#62;
                         </Margin>
                     </Col>
                     <Col xs={12} sm={6} md={6} lg={6} className='alignresponsiveright' >

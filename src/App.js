@@ -29,7 +29,6 @@ class App extends Component {
                         <LcpLogoContent heightImg={200}/>
                         <LcpNotifyMe />
                     </AlignVertically>
-
                     <LcpFooter />
                 </LcpBackground>
             </Body>

@@ -1,6 +1,6 @@
 import React from 'react';
 import glamorous from 'glamorous';
-import LcpLogoImg from '../assets/lima_logo.png';
+import LcpLogoImg from '../assets/logo_lcp.png';
 
 const mediaQueries = {
     phone: '@media only screen and (max-width: 500px)'
@@ -14,7 +14,8 @@ const LogoImg = glamorous.img({
     width: 'auto',
     'margin-left': 'auto',
     'margin-right': 'auto',
-    display: 'block'
+    display: 'block',
+    '-webkit-filter': 'drop-shadow(5px 6px 7px rgba(0,0,0,0.6))  drop-shadow(6px 6px 20px rgba(0,0,0,0.5))'
 });
 
 const ComingSoonMessage = glamorous.div({
